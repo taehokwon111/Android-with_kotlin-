@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/MylottoApplication/app/src/main/res/drawable-v24/circle_b.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MylottoApplication/app/src/main/res/drawable-v24/circle_g.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MylottoApplication/app/src/main/res/drawable-v24/circle_gre.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MylottoApplication/app/src/main/res/drawable-v24/circle_r.xml" value="0.15648148148148147" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MylottoApplication/app/src/main/res/drawable/circle_color.xml" value="0.15648148148148147" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MylottoApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>

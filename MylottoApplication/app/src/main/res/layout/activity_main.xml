@@ -52,66 +52,78 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             android:text="1"
+            android:background="@drawable/circle_b"
+            android:gravity="center"
             tools:visibility="visible"
             android:textStyle="bold"
             android:textSize="30dp"
             android:layout_marginRight="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <TextView
             android:id="@+id/textnum2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:background="@drawable/circle_b"
+            android:gravity="center"
             android:textStyle="bold"
             android:visibility="gone"
             tools:visibility="visible"
             android:textSize="30dp"
             android:layout_marginRight="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <TextView
             android:id="@+id/textnum3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:background="@drawable/circle_b"
+            android:gravity="center"
             android:visibility="gone"
             android:textStyle="bold"
             tools:visibility="visible"
             android:textSize="30dp"
             android:layout_marginRight="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <TextView
             android:id="@+id/textnum4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:background="@drawable/circle_b"
+            android:gravity="center"
             tools:visibility="visible"
             android:visibility="gone"
             android:textStyle="bold"
             android:textSize="30dp"
             android:layout_marginRight="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <TextView
             android:id="@+id/textnum5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:background="@drawable/circle_b"
+            android:gravity="center"
             tools:visibility="visible"
             android:visibility="gone"
             android:textStyle="bold"
             android:textSize="30dp"
             android:layout_marginRight="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
         <TextView
             android:id="@+id/textnum6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
+            android:background="@drawable/circle_b"
+            android:gravity="center"
             tools:visibility="visible"
             android:visibility="gone"
             android:textStyle="bold"
             android:textSize="30dp"
             android:layout_marginRight="15dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
