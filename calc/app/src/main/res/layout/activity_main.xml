@@ -79,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/modulobtn"
                 android:background="@drawable/btn_background"
                 android:text="%"
                 android:textSize="25sp"
@@ -88,6 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dividerbtn"
                 android:background="@drawable/btn_background"
                 android:text="/"
                 android:textSize="25sp"
@@ -100,6 +102,7 @@
         </TableRow>
         <TableRow android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn7"
                 android:background="@drawable/btn_background"
                 android:text="7"
                 android:textSize="25sp"
@@ -109,6 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn8"
                 android:background="@drawable/btn_background"
                 android:text="8"
                 android:textSize="25sp"
@@ -118,6 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn9"
                 android:background="@drawable/btn_background"
                 android:text="9"
                 android:textSize="25sp"
@@ -127,6 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/multibtn"
                 android:background="@drawable/btn_background"
                 android:text="X"
                 android:textSize="25sp"
@@ -140,6 +146,7 @@
 
         <TableRow android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn4"
                 android:background="@drawable/btn_background"
                 android:text="4"
                 android:textSize="25sp"
@@ -149,6 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn5"
                 android:background="@drawable/btn_background"
                 android:text="5"
                 android:textSize="25sp"
@@ -158,6 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn6"
                 android:background="@drawable/btn_background"
                 android:text="6"
                 android:textSize="25sp"
@@ -167,6 +176,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minusbtn"
                 android:background="@drawable/btn_background"
                 android:text="-"
                 android:textSize="25sp"
@@ -179,6 +189,7 @@
         </TableRow>
         <TableRow android:layout_weight="1">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn1"
                 android:background="@drawable/btn_background"
                 android:text="1"
                 android:textSize="25sp"
@@ -188,6 +199,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn2"
                 android:background="@drawable/btn_background"
                 android:text="2"
                 android:textSize="25sp"
@@ -197,6 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn3"
                 android:background="@drawable/btn_background"
                 android:text="3"
                 android:textSize="25sp"
@@ -206,6 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plusbtn"
                 android:background="@drawable/btn_background"
                 android:text="+"
                 android:textSize="25sp"
@@ -228,6 +242,7 @@
                 android:src="@drawable/ic_baseline_restore_24"
                 android:layout_height="match_parent"/>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn0"
                 android:background="@drawable/btn_background"
                 android:text="0"
                 android:textSize="25sp"
