@@ -10,6 +10,7 @@
         android:id="@+id/diaryEditText"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:textColor="@color/black"
         android:background="@color/white"
         android:gravity="start|top"
         android:padding="10dp"

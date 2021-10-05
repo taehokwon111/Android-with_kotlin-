@@ -1,6 +1,7 @@
 package com.example.secret_flie
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -70,6 +71,8 @@ class MainActivity : AppCompatActivity() {
                 //패스워드 성공
                 //TODO 다이어리 후 남겨줘야함
                 //startActivity()
+
+                startActivity(Intent(this, DiaryActivity::class.java))
             }else {
                 showErrorDialog()
                 //실패
