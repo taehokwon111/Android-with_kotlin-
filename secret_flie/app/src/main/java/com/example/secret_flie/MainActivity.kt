@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     private val openButton: AppCompatButton by lazy {
         findViewById<AppCompatButton>(R.id.openbtn)
+
     }
     private val changeButton: AppCompatButton by lazy {
         findViewById<AppCompatButton>(R.id.changebtn)
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         numberPicker1
         numberPicker2
         numberPicker3
+        openButton.setBackgroundColor(Color.BLACK);
+        changeButton.setBackgroundColor(Color.BLACK);
 
         openButton.setOnClickListener {
 
