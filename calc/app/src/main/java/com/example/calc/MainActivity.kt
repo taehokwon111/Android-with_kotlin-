@@ -1,11 +1,18 @@
 package com.example.calc
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import java.lang.NumberFormatException
 import java.util.function.BinaryOperator
+import kotlin.math.exp
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var isOperator = false;
+    private var hasOperator = false;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,10 +63,11 @@ class MainActivity : AppCompatActivity() {
         isOperator = false;
 
         val expressionText = expressionTextView.text.split("");
-        if (expressionText.isNotEmpty() && expressionText.last().length >= 15){
+        if (expressionText.last().length >= 15){
             Toast.makeText(this, "15자리 까지만 사용할 수 있습니다.", Toast.LENGTH_SHORT).show();
             return
-        } else if (expressionText.last().isEmpty() && number == "0"){
+        }
+        else if (expressionText.isEmpty() && number == "0"){
             Toast.makeText(this, "0은 제일 앞에 둘 수 없습니다.", Toast.LENGTH_SHORT).show();
             return
         }
@@ -68,8 +77,33 @@ class MainActivity : AppCompatActivity() {
 
     private fun operatorButtonClicked(operator: String){
         if (expressionTextView.text.isEmpty()){
-
+            return
         }
+        when {
+            isOperator ->{
+                val text = expressionTextView.text.toString();
+                expressionTextView.text = text.dropLast(1) + operator;
+            }
+            hasOperator ->{
+                Toast.makeText(this, "연산자는 한 번만 사용할 수 있습니다", Toast.LENGTH_SHORT).show();
+                return
+            }
+            else ->{
+                expressionTextView.append(" $operator");
+            }
+        }
+        val ssd = SpannableStringBuilder(expressionTextView.text);
+
+        ssd.setSpan(
+                ForegroundColorSpan(ContextCompat.getColor(this, R.color.green)),
+                expressionTextView.text.length -1,
+                expressionTextView.text.length,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        expressionTextView.text = ssd;
+
+        isOperator = true;
+        hasOperator = true;
     }
 
 
@@ -79,7 +113,44 @@ class MainActivity : AppCompatActivity() {
     fun resultbtnclick(v: View){
         Toast.makeText(this, "응애", Toast.LENGTH_SHORT).show()
     }
-    fun clearbtnclick(v: View){
-        Toast.makeText(this, "응애", Toast.LENGTH_SHORT).show()
+
+    private fun calculateExpression(): String{
+        val expressionTexts = expressionTextView.text.split("")
+
+        if (hasOperator.not() || expressionTexts.size != 3){
+            return ""
+        }else if(expressionTexts[0].isNumber().not() || expressionTexts[2].isNumber().not()){
+            return ""
+        }
+        val expl1 = expressionTexts[0].toBigInteger();
+        val expl2 = expressionTexts[2].toBigInteger();
+        val op =  expressionTexts[1]
+
+        return when(op){
+                "+" ->(expl1 + expl2).toString();
+                "-" ->(expl1 - expl2).toString();
+                "*" ->(expl1 * expl2).toString();
+                "/" ->(expl1 / expl2).toString();
+                "%" ->(expl1 % expl2).toString();
+                else -> ""
+        }
+
     }
+    fun clearbtnclick(v: View){
+
+        expressionTextView.text = "";
+        resultTextView.text = "";
+        isOperator = false;
+        hasOperator = false;
+    }
+}
+
+fun String.isNumber(): Boolean{
+    return try {
+        this.toBigInteger();
+        true;
+    }catch (e: NumberFormatException) {
+        false
+    }
+
 }
